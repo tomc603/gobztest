@@ -83,11 +83,10 @@ func dataParse(r io.Reader) error {
 	br := bufio.NewReader(r)
 
 	st := time.Now()
-	defer log.Printf(" * Decompress time: %0.2f sec", time.Since(st).Seconds())
 	_, e := io.Copy(ioutil.Discard, br)
 	if e != nil {
 		return e
 	}
-
+	log.Printf(" * Decompress time: %0.3f sec", time.Since(st).Seconds())
 	return nil
 }
