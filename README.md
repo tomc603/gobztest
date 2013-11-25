@@ -1,4 +1,4 @@
-gobztest
-========
+gocompresstest
+==============
 
-Test of Go(lang) Bzip2 speed
+Test of Go(lang) compression speed
